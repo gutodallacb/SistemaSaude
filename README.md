@@ -4,7 +4,11 @@ O Sistema Saúde é uma aplicação desenvolvida em C# e Windows Forms, utilizan
 
 Funcionalidades principais:
 
+
 -Cadastro de Pacientes: Registro de informações detalhadas dos pacientes, incluindo matrícula, diagnóstico e dados pessoais;
+
 -Atendimento: Registro completo de atendimentos realizados, com informações específicas sobre o processo;
+
 -Diagnóstico: Seleção e registro de diagnósticos simples para cada paciente;
+
 -Persistência de Dados: Armazenamento de todos os dados no banco de dados usando Entity Framework;
