@@ -35,8 +35,6 @@
 			dateTimePickerCSN = new DateTimePicker();
 			label25 = new Label();
 			textBoxCSN = new TextBox();
-			label24 = new Label();
-			comboBoxEspDiagnostico = new ComboBox();
 			label21 = new Label();
 			comboBoxDiagnostico = new ComboBox();
 			label23 = new Label();
@@ -60,43 +58,49 @@
 			button3 = new Button();
 			button1 = new Button();
 			label19 = new Label();
-			comboBox9 = new ComboBox();
+			comboBoxInstDestino = new ComboBox();
 			label18 = new Label();
-			comboBox8 = new ComboBox();
+			comboBoxLocais = new ComboBox();
 			label17 = new Label();
-			textBox1 = new TextBox();
+			textBoxPedidoInt = new TextBox();
 			label16 = new Label();
 			label15 = new Label();
 			label14 = new Label();
-			comboBox7 = new ComboBox();
-			comboBox6 = new ComboBox();
-			label13 = new Label();
-			comboBox5 = new ComboBox();
-			checkBox2 = new CheckBox();
-			label12 = new Label();
-			comboBox4 = new ComboBox();
-			checkBox1 = new CheckBox();
+			comboBoxAssistente = new ComboBox();
+			comboBoxFechou = new ComboBox();
+			comboBoxUsuResp = new ComboBox();
 			label11 = new Label();
-			comboBox3 = new ComboBox();
+			comboBoxPlano = new ComboBox();
 			label10 = new Label();
-			dateTimePicker2 = new DateTimePicker();
+			dateTimePickerDtFin = new DateTimePicker();
 			label9 = new Label();
-			comboBox2 = new ComboBox();
+			comboBoxConvenio = new ComboBox();
 			label8 = new Label();
-			comboBox1 = new ComboBox();
+			comboBoxTipo = new ComboBox();
 			label7 = new Label();
-			dateTimePicker1 = new DateTimePicker();
+			dateTimePickerDtIni = new DateTimePicker();
 			label6 = new Label();
 			comboBoxPaciente = new ComboBox();
+			Consulta = new TabPage();
+			button5 = new Button();
+			button4 = new Button();
+			label13 = new Label();
+			label12 = new Label();
+			dataGridViewAtendimentos = new DataGridView();
+			dataGridViewPacientes = new DataGridView();
 			tabGeral.SuspendLayout();
 			tabPage1.SuspendLayout();
 			TabAtendimento.SuspendLayout();
+			Consulta.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewAtendimentos).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridViewPacientes).BeginInit();
 			SuspendLayout();
 			// 
 			// tabGeral
 			// 
 			tabGeral.Controls.Add(tabPage1);
 			tabGeral.Controls.Add(TabAtendimento);
+			tabGeral.Controls.Add(Consulta);
 			tabGeral.Location = new Point(8, 5);
 			tabGeral.Name = "tabGeral";
 			tabGeral.SelectedIndex = 0;
@@ -110,8 +114,6 @@
 			tabPage1.Controls.Add(dateTimePickerCSN);
 			tabPage1.Controls.Add(label25);
 			tabPage1.Controls.Add(textBoxCSN);
-			tabPage1.Controls.Add(label24);
-			tabPage1.Controls.Add(comboBoxEspDiagnostico);
 			tabPage1.Controls.Add(label21);
 			tabPage1.Controls.Add(comboBoxDiagnostico);
 			tabPage1.Controls.Add(label23);
@@ -152,9 +154,9 @@
 			// 
 			// buttonCadastrar
 			// 
-			buttonCadastrar.Location = new Point(293, 270);
+			buttonCadastrar.Location = new Point(243, 272);
 			buttonCadastrar.Name = "buttonCadastrar";
-			buttonCadastrar.Size = new Size(196, 32);
+			buttonCadastrar.Size = new Size(245, 32);
 			buttonCadastrar.TabIndex = 30;
 			buttonCadastrar.Text = "Cadastrar Paciente";
 			buttonCadastrar.UseVisualStyleBackColor = true;
@@ -162,7 +164,7 @@
 			// 
 			// dateTimePickerCSN
 			// 
-			dateTimePickerCSN.Location = new Point(157, 242);
+			dateTimePickerCSN.Location = new Point(157, 210);
 			dateTimePickerCSN.Name = "dateTimePickerCSN";
 			dateTimePickerCSN.Size = new Size(331, 23);
 			dateTimePickerCSN.TabIndex = 29;
@@ -170,7 +172,7 @@
 			// label25
 			// 
 			label25.AutoSize = true;
-			label25.Location = new Point(15, 246);
+			label25.Location = new Point(15, 213);
 			label25.Name = "label25";
 			label25.Size = new Size(33, 15);
 			label25.TabIndex = 27;
@@ -178,27 +180,10 @@
 			// 
 			// textBoxCSN
 			// 
-			textBoxCSN.Location = new Point(54, 242);
+			textBoxCSN.Location = new Point(54, 210);
 			textBoxCSN.Name = "textBoxCSN";
 			textBoxCSN.Size = new Size(97, 23);
 			textBoxCSN.TabIndex = 26;
-			// 
-			// label24
-			// 
-			label24.AutoSize = true;
-			label24.Location = new Point(11, 212);
-			label24.Name = "label24";
-			label24.Size = new Size(163, 15);
-			label24.TabIndex = 25;
-			label24.Text = "Especificação de Diagnóstico:";
-			// 
-			// comboBoxEspDiagnostico
-			// 
-			comboBoxEspDiagnostico.FormattingEnabled = true;
-			comboBoxEspDiagnostico.Location = new Point(180, 209);
-			comboBoxEspDiagnostico.Name = "comboBoxEspDiagnostico";
-			comboBoxEspDiagnostico.Size = new Size(308, 23);
-			comboBoxEspDiagnostico.TabIndex = 24;
 			// 
 			// label21
 			// 
@@ -271,9 +256,9 @@
 			// 
 			// buttonLimpar
 			// 
-			buttonLimpar.Location = new Point(86, 271);
+			buttonLimpar.Location = new Point(6, 272);
 			buttonLimpar.Name = "buttonLimpar";
-			buttonLimpar.Size = new Size(200, 32);
+			buttonLimpar.Size = new Size(232, 32);
 			buttonLimpar.TabIndex = 12;
 			buttonLimpar.Text = "Limpar Campos";
 			buttonLimpar.UseVisualStyleBackColor = true;
@@ -282,7 +267,7 @@
 			// checkBoxAtivo
 			// 
 			checkBoxAtivo.AutoSize = true;
-			checkBoxAtivo.Location = new Point(59, 279);
+			checkBoxAtivo.Location = new Point(54, 249);
 			checkBoxAtivo.Name = "checkBoxAtivo";
 			checkBoxAtivo.Size = new Size(15, 14);
 			checkBoxAtivo.TabIndex = 11;
@@ -323,7 +308,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(15, 278);
+			label5.Location = new Point(10, 248);
 			label5.Name = "label5";
 			label5.Size = new Size(38, 15);
 			label5.TabIndex = 4;
@@ -371,32 +356,27 @@
 			TabAtendimento.Controls.Add(button3);
 			TabAtendimento.Controls.Add(button1);
 			TabAtendimento.Controls.Add(label19);
-			TabAtendimento.Controls.Add(comboBox9);
+			TabAtendimento.Controls.Add(comboBoxInstDestino);
 			TabAtendimento.Controls.Add(label18);
-			TabAtendimento.Controls.Add(comboBox8);
+			TabAtendimento.Controls.Add(comboBoxLocais);
 			TabAtendimento.Controls.Add(label17);
-			TabAtendimento.Controls.Add(textBox1);
+			TabAtendimento.Controls.Add(textBoxPedidoInt);
 			TabAtendimento.Controls.Add(label16);
 			TabAtendimento.Controls.Add(label15);
 			TabAtendimento.Controls.Add(label14);
-			TabAtendimento.Controls.Add(comboBox7);
-			TabAtendimento.Controls.Add(comboBox6);
-			TabAtendimento.Controls.Add(label13);
-			TabAtendimento.Controls.Add(comboBox5);
-			TabAtendimento.Controls.Add(checkBox2);
-			TabAtendimento.Controls.Add(label12);
-			TabAtendimento.Controls.Add(comboBox4);
-			TabAtendimento.Controls.Add(checkBox1);
+			TabAtendimento.Controls.Add(comboBoxAssistente);
+			TabAtendimento.Controls.Add(comboBoxFechou);
+			TabAtendimento.Controls.Add(comboBoxUsuResp);
 			TabAtendimento.Controls.Add(label11);
-			TabAtendimento.Controls.Add(comboBox3);
+			TabAtendimento.Controls.Add(comboBoxPlano);
 			TabAtendimento.Controls.Add(label10);
-			TabAtendimento.Controls.Add(dateTimePicker2);
+			TabAtendimento.Controls.Add(dateTimePickerDtFin);
 			TabAtendimento.Controls.Add(label9);
-			TabAtendimento.Controls.Add(comboBox2);
+			TabAtendimento.Controls.Add(comboBoxConvenio);
 			TabAtendimento.Controls.Add(label8);
-			TabAtendimento.Controls.Add(comboBox1);
+			TabAtendimento.Controls.Add(comboBoxTipo);
 			TabAtendimento.Controls.Add(label7);
-			TabAtendimento.Controls.Add(dateTimePicker1);
+			TabAtendimento.Controls.Add(dateTimePickerDtIni);
 			TabAtendimento.Controls.Add(label6);
 			TabAtendimento.Controls.Add(comboBoxPaciente);
 			TabAtendimento.Location = new Point(4, 24);
@@ -406,24 +386,27 @@
 			TabAtendimento.TabIndex = 1;
 			TabAtendimento.Text = "Atendimento";
 			TabAtendimento.UseVisualStyleBackColor = true;
+			TabAtendimento.Click += TabAtendimento_Click;
 			// 
 			// button3
 			// 
-			button3.Location = new Point(11, 304);
+			button3.Location = new Point(8, 272);
 			button3.Name = "button3";
-			button3.Size = new Size(196, 32);
+			button3.Size = new Size(239, 32);
 			button3.TabIndex = 32;
 			button3.Text = "Limpar Campos";
 			button3.UseVisualStyleBackColor = true;
+			button3.Click += button3_Click;
 			// 
 			// button1
 			// 
-			button1.Location = new Point(210, 304);
+			button1.Location = new Point(253, 272);
 			button1.Name = "button1";
-			button1.Size = new Size(196, 32);
+			button1.Size = new Size(239, 32);
 			button1.TabIndex = 31;
 			button1.Text = "Salavar Atendimento";
 			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
 			// 
 			// label19
 			// 
@@ -434,52 +417,53 @@
 			label19.TabIndex = 30;
 			label19.Text = "Instituição de Destino:";
 			// 
-			// comboBox9
+			// comboBoxInstDestino
 			// 
-			comboBox9.FormattingEnabled = true;
-			comboBox9.Location = new Point(129, 196);
-			comboBox9.Name = "comboBox9";
-			comboBox9.Size = new Size(275, 23);
-			comboBox9.TabIndex = 29;
+			comboBoxInstDestino.FormattingEnabled = true;
+			comboBoxInstDestino.Location = new Point(129, 196);
+			comboBoxInstDestino.Name = "comboBoxInstDestino";
+			comboBoxInstDestino.Size = new Size(353, 23);
+			comboBoxInstDestino.TabIndex = 29;
+			comboBoxInstDestino.SelectedIndexChanged += comboBoxInstDestino_SelectedIndexChanged;
 			// 
 			// label18
 			// 
 			label18.AutoSize = true;
-			label18.Location = new Point(236, 169);
+			label18.Location = new Point(16, 170);
 			label18.Name = "label18";
 			label18.Size = new Size(38, 15);
 			label18.TabIndex = 28;
 			label18.Text = "Local:";
 			// 
-			// comboBox8
+			// comboBoxLocais
 			// 
-			comboBox8.FormattingEnabled = true;
-			comboBox8.Location = new Point(283, 166);
-			comboBox8.Name = "comboBox8";
-			comboBox8.Size = new Size(121, 23);
-			comboBox8.TabIndex = 27;
-			comboBox8.SelectedIndexChanged += comboBox8_SelectedIndexChanged;
+			comboBoxLocais.FormattingEnabled = true;
+			comboBoxLocais.Location = new Point(60, 166);
+			comboBoxLocais.Name = "comboBoxLocais";
+			comboBoxLocais.Size = new Size(422, 23);
+			comboBoxLocais.TabIndex = 27;
+			comboBoxLocais.SelectedIndexChanged += comboBox8_SelectedIndexChanged;
 			// 
 			// label17
 			// 
 			label17.AutoSize = true;
-			label17.Location = new Point(6, 169);
+			label17.Location = new Point(11, 137);
 			label17.Name = "label17";
 			label17.Size = new Size(122, 15);
 			label17.TabIndex = 26;
 			label17.Text = "Pedido de internação:";
 			// 
-			// textBox1
+			// textBoxPedidoInt
 			// 
-			textBox1.Location = new Point(129, 165);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(75, 23);
-			textBox1.TabIndex = 25;
+			textBoxPedidoInt.Location = new Point(138, 134);
+			textBoxPedidoInt.Name = "textBoxPedidoInt";
+			textBoxPedidoInt.Size = new Size(344, 23);
+			textBoxPedidoInt.TabIndex = 25;
 			// 
 			// label16
 			// 
 			label16.AutoSize = true;
-			label16.Location = new Point(307, 256);
+			label16.Location = new Point(357, 223);
 			label16.Name = "label16";
 			label16.Size = new Size(63, 15);
 			label16.TabIndex = 24;
@@ -488,7 +472,7 @@
 			// label15
 			// 
 			label15.AutoSize = true;
-			label15.Location = new Point(176, 256);
+			label15.Location = new Point(208, 223);
 			label15.Name = "label15";
 			label15.Size = new Size(49, 15);
 			label15.TabIndex = 23;
@@ -497,98 +481,53 @@
 			// label14
 			// 
 			label14.AutoSize = true;
-			label14.Location = new Point(32, 256);
+			label14.Location = new Point(38, 223);
 			label14.Name = "label14";
 			label14.Size = new Size(75, 15);
 			label14.TabIndex = 22;
 			label14.Text = "Responsável:";
 			// 
-			// comboBox7
+			// comboBoxAssistente
 			// 
-			comboBox7.FormattingEnabled = true;
-			comboBox7.Location = new Point(275, 274);
-			comboBox7.Name = "comboBox7";
-			comboBox7.Size = new Size(131, 23);
-			comboBox7.TabIndex = 21;
+			comboBoxAssistente.FormattingEnabled = true;
+			comboBoxAssistente.Location = new Point(325, 241);
+			comboBoxAssistente.Name = "comboBoxAssistente";
+			comboBoxAssistente.Size = new Size(150, 23);
+			comboBoxAssistente.TabIndex = 21;
 			// 
-			// comboBox6
+			// comboBoxFechou
 			// 
-			comboBox6.FormattingEnabled = true;
-			comboBox6.Location = new Point(137, 274);
-			comboBox6.Name = "comboBox6";
-			comboBox6.Size = new Size(130, 23);
-			comboBox6.TabIndex = 20;
+			comboBoxFechou.FormattingEnabled = true;
+			comboBoxFechou.Location = new Point(169, 241);
+			comboBoxFechou.Name = "comboBoxFechou";
+			comboBoxFechou.Size = new Size(150, 23);
+			comboBoxFechou.TabIndex = 20;
 			// 
-			// label13
+			// comboBoxUsuResp
 			// 
-			label13.AutoSize = true;
-			label13.Location = new Point(17, 234);
-			label13.Name = "label13";
-			label13.Size = new Size(55, 15);
-			label13.TabIndex = 19;
-			label13.Text = "Usuários:";
-			// 
-			// comboBox5
-			// 
-			comboBox5.FormattingEnabled = true;
-			comboBox5.Location = new Point(10, 274);
-			comboBox5.Name = "comboBox5";
-			comboBox5.Size = new Size(119, 23);
-			comboBox5.TabIndex = 18;
-			// 
-			// checkBox2
-			// 
-			checkBox2.AutoSize = true;
-			checkBox2.Location = new Point(210, 135);
-			checkBox2.Name = "checkBox2";
-			checkBox2.Size = new Size(71, 19);
-			checkBox2.TabIndex = 17;
-			checkBox2.Text = "Fechado";
-			checkBox2.UseVisualStyleBackColor = true;
-			// 
-			// label12
-			// 
-			label12.AutoSize = true;
-			label12.Location = new Point(6, 137);
-			label12.Name = "label12";
-			label12.Size = new Size(66, 15);
-			label12.TabIndex = 16;
-			label12.Text = "Conclusão:";
-			// 
-			// comboBox4
-			// 
-			comboBox4.FormattingEnabled = true;
-			comboBox4.Location = new Point(73, 133);
-			comboBox4.Name = "comboBox4";
-			comboBox4.Size = new Size(131, 23);
-			comboBox4.TabIndex = 15;
-			// 
-			// checkBox1
-			// 
-			checkBox1.AutoSize = true;
-			checkBox1.Location = new Point(325, 106);
-			checkBox1.Name = "checkBox1";
-			checkBox1.Size = new Size(79, 19);
-			checkBox1.TabIndex = 14;
-			checkBox1.Text = "Finalizado";
-			checkBox1.UseVisualStyleBackColor = true;
+			comboBoxUsuResp.FormattingEnabled = true;
+			comboBoxUsuResp.Location = new Point(16, 241);
+			comboBoxUsuResp.Name = "comboBoxUsuResp";
+			comboBoxUsuResp.Size = new Size(147, 23);
+			comboBoxUsuResp.TabIndex = 18;
 			// 
 			// label11
 			// 
 			label11.AutoSize = true;
-			label11.Location = new Point(227, 50);
+			label11.Location = new Point(253, 50);
 			label11.Name = "label11";
 			label11.Size = new Size(40, 15);
 			label11.TabIndex = 13;
 			label11.Text = "Plano:";
 			// 
-			// comboBox3
+			// comboBoxPlano
 			// 
-			comboBox3.FormattingEnabled = true;
-			comboBox3.Location = new Point(267, 46);
-			comboBox3.Name = "comboBox3";
-			comboBox3.Size = new Size(137, 23);
-			comboBox3.TabIndex = 12;
+			comboBoxPlano.FormattingEnabled = true;
+			comboBoxPlano.Location = new Point(293, 46);
+			comboBoxPlano.Name = "comboBoxPlano";
+			comboBoxPlano.Size = new Size(189, 23);
+			comboBoxPlano.TabIndex = 12;
+			comboBoxPlano.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
 			// 
 			// label10
 			// 
@@ -599,12 +538,12 @@
 			label10.TabIndex = 11;
 			label10.Text = "Convênio:";
 			// 
-			// dateTimePicker2
+			// dateTimePickerDtFin
 			// 
-			dateTimePicker2.Location = new Point(73, 104);
-			dateTimePicker2.Name = "dateTimePicker2";
-			dateTimePicker2.Size = new Size(247, 23);
-			dateTimePicker2.TabIndex = 10;
+			dateTimePickerDtFin.Location = new Point(73, 104);
+			dateTimePickerDtFin.Name = "dateTimePickerDtFin";
+			dateTimePickerDtFin.Size = new Size(409, 23);
+			dateTimePickerDtFin.TabIndex = 10;
 			// 
 			// label9
 			// 
@@ -615,30 +554,31 @@
 			label9.TabIndex = 9;
 			label9.Text = "Data final:";
 			// 
-			// comboBox2
+			// comboBoxConvenio
 			// 
-			comboBox2.FormattingEnabled = true;
-			comboBox2.Location = new Point(73, 46);
-			comboBox2.Name = "comboBox2";
-			comboBox2.Size = new Size(131, 23);
-			comboBox2.TabIndex = 8;
+			comboBoxConvenio.FormattingEnabled = true;
+			comboBoxConvenio.Location = new Point(73, 46);
+			comboBoxConvenio.Name = "comboBoxConvenio";
+			comboBoxConvenio.Size = new Size(174, 23);
+			comboBoxConvenio.TabIndex = 8;
 			// 
 			// label8
 			// 
 			label8.AutoSize = true;
-			label8.Location = new Point(231, 21);
+			label8.Location = new Point(257, 21);
 			label8.Name = "label8";
 			label8.Size = new Size(33, 15);
 			label8.TabIndex = 7;
 			label8.Text = "Tipo:";
 			// 
-			// comboBox1
+			// comboBoxTipo
 			// 
-			comboBox1.FormattingEnabled = true;
-			comboBox1.Location = new Point(267, 17);
-			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(137, 23);
-			comboBox1.TabIndex = 6;
+			comboBoxTipo.FormattingEnabled = true;
+			comboBoxTipo.Location = new Point(293, 17);
+			comboBoxTipo.Name = "comboBoxTipo";
+			comboBoxTipo.Size = new Size(189, 23);
+			comboBoxTipo.TabIndex = 6;
+			comboBoxTipo.SelectedIndexChanged += comboBoxTipo_SelectedIndexChanged;
 			// 
 			// label7
 			// 
@@ -649,12 +589,12 @@
 			label7.TabIndex = 3;
 			label7.Text = "Data início:";
 			// 
-			// dateTimePicker1
+			// dateTimePickerDtIni
 			// 
-			dateTimePicker1.Location = new Point(73, 75);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(247, 23);
-			dateTimePicker1.TabIndex = 2;
+			dateTimePickerDtIni.Location = new Point(73, 75);
+			dateTimePickerDtIni.Name = "dateTimePickerDtIni";
+			dateTimePickerDtIni.Size = new Size(409, 23);
+			dateTimePickerDtIni.TabIndex = 2;
 			// 
 			// label6
 			// 
@@ -670,8 +610,80 @@
 			comboBoxPaciente.FormattingEnabled = true;
 			comboBoxPaciente.Location = new Point(73, 16);
 			comboBoxPaciente.Name = "comboBoxPaciente";
-			comboBoxPaciente.Size = new Size(131, 23);
+			comboBoxPaciente.Size = new Size(174, 23);
 			comboBoxPaciente.TabIndex = 0;
+			comboBoxPaciente.SelectedIndexChanged += comboBoxPaciente_SelectedIndexChanged;
+			// 
+			// Consulta
+			// 
+			Consulta.Controls.Add(button5);
+			Consulta.Controls.Add(button4);
+			Consulta.Controls.Add(label13);
+			Consulta.Controls.Add(label12);
+			Consulta.Controls.Add(dataGridViewAtendimentos);
+			Consulta.Controls.Add(dataGridViewPacientes);
+			Consulta.Location = new Point(4, 24);
+			Consulta.Name = "Consulta";
+			Consulta.Padding = new Padding(3);
+			Consulta.Size = new Size(498, 311);
+			Consulta.TabIndex = 2;
+			Consulta.Text = "Consulta de pacientes e atendimentos";
+			Consulta.UseVisualStyleBackColor = true;
+			Consulta.Click += tabPage2_Click;
+			// 
+			// button5
+			// 
+			button5.Location = new Point(5, 282);
+			button5.Name = "button5";
+			button5.Size = new Size(75, 23);
+			button5.TabIndex = 5;
+			button5.Text = "Consultar";
+			button5.UseVisualStyleBackColor = true;
+			button5.Click += button5_Click;
+			// 
+			// button4
+			// 
+			button4.Location = new Point(3, 125);
+			button4.Name = "button4";
+			button4.Size = new Size(75, 23);
+			button4.TabIndex = 4;
+			button4.Text = "Consultar";
+			button4.UseVisualStyleBackColor = true;
+			button4.Click += button4_Click;
+			// 
+			// label13
+			// 
+			label13.AutoSize = true;
+			label13.Location = new Point(6, 158);
+			label13.Name = "label13";
+			label13.Size = new Size(151, 15);
+			label13.TabIndex = 3;
+			label13.Text = "Atendimentos cadastrados:";
+			// 
+			// label12
+			// 
+			label12.AutoSize = true;
+			label12.Location = new Point(6, 3);
+			label12.Name = "label12";
+			label12.Size = new Size(126, 15);
+			label12.TabIndex = 2;
+			label12.Text = "Pacientes cadastrados:";
+			// 
+			// dataGridViewAtendimentos
+			// 
+			dataGridViewAtendimentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewAtendimentos.Location = new Point(6, 176);
+			dataGridViewAtendimentos.Name = "dataGridViewAtendimentos";
+			dataGridViewAtendimentos.Size = new Size(486, 102);
+			dataGridViewAtendimentos.TabIndex = 1;
+			// 
+			// dataGridViewPacientes
+			// 
+			dataGridViewPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewPacientes.Location = new Point(6, 21);
+			dataGridViewPacientes.Name = "dataGridViewPacientes";
+			dataGridViewPacientes.Size = new Size(486, 101);
+			dataGridViewPacientes.TabIndex = 0;
 			// 
 			// SistemaSaude
 			// 
@@ -679,6 +691,8 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(517, 350);
 			Controls.Add(tabGeral);
+			MaximumSize = new Size(533, 389);
+			MinimumSize = new Size(533, 389);
 			Name = "SistemaSaude";
 			Text = "Sistema Saúde - Projeto Sofis";
 			tabGeral.ResumeLayout(false);
@@ -686,6 +700,10 @@
 			tabPage1.PerformLayout();
 			TabAtendimento.ResumeLayout(false);
 			TabAtendimento.PerformLayout();
+			Consulta.ResumeLayout(false);
+			Consulta.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridViewAtendimentos).EndInit();
+			((System.ComponentModel.ISupportInitialize)dataGridViewPacientes).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -707,38 +725,31 @@
 		private ComboBox comboBoxPaciente;
 		private Label label6;
 		private Label label7;
-		private DateTimePicker dateTimePicker1;
-		private ComboBox comboBox1;
+		private DateTimePicker dateTimePickerDtIni;
+		private ComboBox comboBoxTipo;
 		private Label label8;
 		private Label label10;
-		private DateTimePicker dateTimePicker2;
+		private DateTimePicker dateTimePickerDtFin;
 		private Label label9;
-		private ComboBox comboBox2;
-		private Label label12;
-		private ComboBox comboBox4;
-		private CheckBox checkBox1;
+		private ComboBox comboBoxConvenio;
 		private Label label11;
-		private ComboBox comboBox3;
-		private ComboBox comboBox6;
-		private Label label13;
-		private ComboBox comboBox5;
-		private CheckBox checkBox2;
-		private ComboBox comboBox8;
+		private ComboBox comboBoxPlano;
+		private ComboBox comboBoxFechou;
+		private ComboBox comboBoxUsuResp;
+		private ComboBox comboBoxLocais;
 		private Label label17;
-		private TextBox textBox1;
+		private TextBox textBoxPedidoInt;
 		private Label label16;
 		private Label label15;
 		private Label label14;
-		private ComboBox comboBox7;
+		private ComboBox comboBoxAssistente;
 		private Label label19;
-		private ComboBox comboBox9;
+		private ComboBox comboBoxInstDestino;
 		private Label label18;
 		private TextBox textBoxCodExterno;
 		private Label label20;
 		private Label label2;
 		private Button button1;
-		private Label label24;
-		private ComboBox comboBoxEspDiagnostico;
 		private Label label21;
 		private ComboBox comboBoxDiagnostico;
 		private Label label23;
@@ -751,5 +762,12 @@
 		private TextBox textBoxCSN;
 		private Button button3;
 		private Button button2;
+		private TabPage Consulta;
+		private Button button5;
+		private Button button4;
+		private Label label13;
+		private Label label12;
+		private DataGridView dataGridViewAtendimentos;
+		private DataGridView dataGridViewPacientes;
 	}
 }

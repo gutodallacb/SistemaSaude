@@ -11,7 +11,7 @@ namespace SistemaSaude
 			// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
-			Application.Run(new SistemaSaude());
+			Application.Run(new View.Login());
 		}
 	}
 }

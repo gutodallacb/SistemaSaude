@@ -81,8 +81,11 @@
 			Controls.Add(label1);
 			Controls.Add(button1);
 			Controls.Add(textBox2);
+			MaximumSize = new Size(413, 140);
+			MinimumSize = new Size(413, 140);
 			Name = "CriarDignostico";
 			Text = "Criar Dignóstico";
+			Load += CriarDignostico_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}

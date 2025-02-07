@@ -7,6 +7,7 @@ namespace SistemaSaude.View
 		public CriarDignostico()
 		{
 			InitializeComponent();
+			this.StartPosition = FormStartPosition.CenterScreen;
 		}
 
 		private void textBox2_TextChanged(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace SistemaSaude.View
 			sistemaSaude.ShowDialog();
 
 			sistemaSaude.CarregarDiagnosticos();
+		}
+
+		private void CriarDignostico_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

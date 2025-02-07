@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProjetoSQLserver.Model;
 using SistemaSaude.Model;
 
 namespace SistemaSaude.Model
@@ -6,6 +7,7 @@ namespace SistemaSaude.Model
 	public class MeuDbContext_ORM : DbContext
 	{
 		//Cria variaveis para usar em outras classes:
+		public DbSet<Usuario> Usuarios { get; set; }
 		public DbSet<Paciente> Pacientes {  get; set; }
 		public DbSet<Atendimento> Atendimentos { get; set; }
 		public DbSet<Diagnostico> Diagnosticos { get; set; }
@@ -25,6 +27,10 @@ namespace SistemaSaude.Model
 		//e definindo regras como as chaves primárias, relacionamentos e restrinções
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			//Define que a propriedade CodRegistro é a chave primária da tabela PACIENTE no banco de dados:
+			modelBuilder.Entity<Usuario>()
+				.HasKey(p => p.cod_usuario);
+
 			//Define que a propriedade CodRegistro é a chave primária da tabela PACIENTE no banco de dados:
 			modelBuilder.Entity<Paciente>()
 				.HasKey(p => p.cod_registro);
@@ -106,3 +112,11 @@ namespace SistemaSaude.Model
 //	cod_instituicao_destino INT,
 //	FOREIGN KEY (cod_registro) REFERENCES PACIENTE(cod_registro)
 //);
+
+//07-02-2025:
+//CREATE TABLE USUARIO (
+//   cod_usuario INT PRIMARY KEY IDENTITY(1,1),
+//   nome_usuario VARCHAR(100),
+//   senha VARCHAR(100),
+//   nivel_usuario INT
+//)
